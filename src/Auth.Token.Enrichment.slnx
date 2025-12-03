@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Auth.Token.Enrichment.AppHost/Auth.Token.Enrichment.AppHost.csproj" />
+  <Project Path="Auth.Token.Enrichment.ServiceDefaults/Auth.Token.Enrichment.ServiceDefaults.csproj" />
+</Solution>
