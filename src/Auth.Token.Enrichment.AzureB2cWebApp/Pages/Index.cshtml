@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Azure B2C Claims Home</h1>
+    @if (@User.Identity is not null && @User.Identity.IsAuthenticated)
+    {
+        <p>You are signed in! Below are the claims in your ID token. For more information, visit: <a href="https://learn.microsoft.com/azure/active-directory/develop/id-tokens">Microsoft identity platform ID tokens</a></p>
+        <table>
+            <tbody>
+                @foreach (var item in @User.Claims)
+                {
+                    <tr>
+                        <td>@item.Type</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+@*      @if (Model.AuthCookieJson is not null)
+        {
+            <h2 class="text-start mt-3">Authentication cookie:</h2>
+            <pre>@Model.AuthCookieJson</pre>
+        }
+ *@    
+    }
+    else
+    {
+        <p>You are not signed in. Please sign in to see your claims.</p>
+    }
+
+
+</div>

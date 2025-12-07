@@ -1,4 +1,4 @@
-<Project Sdk="Aspire.AppHost.Sdk/13.0.1">
+<Project Sdk="Aspire.AppHost.Sdk/13.0.2">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,5 +7,9 @@
     <Nullable>enable</Nullable>
     <UserSecretsId>6dd80e56-fa86-42e2-b036-115a5242e3a1</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Auth.Token.Enrichment.AzureB2cWebApp\Auth.Token.Enrichment.AzureB2cWebApp.csproj" />
+  </ItemGroup>
 
 </Project>

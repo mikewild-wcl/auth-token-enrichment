@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.ServiceDiscovery;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
+
+//1 > C:\dev_mike\auth-token-enrichment\src\Auth.Token.Enrichment.ServiceDefaults\Extensions.cs(16,21,16,31): error CA1724: The type name Extensions conflicts in whole or in part with the namespace name 'Microsoft.AspNetCore.Builder.Extensions'. Change either name to eliminate the conflict. (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1724)
 
 namespace Microsoft.Extensions.Hosting;
 
