@@ -40,7 +40,7 @@ public class ExtensionDataFunction(ILogger<ExtensionDataFunction> logger)
     public async Task<IActionResult> Run(
         [HttpTrigger(AuthorizationLevel.Function,
                     "post",
-                    Route = "extensions-data")]
+                    Route = "extension-data")]
         HttpRequest request)
     {
         logger.Hello(nameof(ExtensionDataFunction));

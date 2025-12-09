@@ -1,6 +1,6 @@
 @Functions_HostAddress = http://localhost:7180
 
-POST {{Functions_HostAddress}}/api/extensions-data/
+POST {{Functions_HostAddress}}/api/extension-data/
 Content-Type: application/json
 Accept: application/json
 
