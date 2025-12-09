@@ -1,0 +1,13 @@
+@Functions_HostAddress = http://localhost:7180
+
+POST {{Functions_HostAddress}}/api/extensions-data/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "my.test.email@text.com",
+  "objectId": "63df2c30-80e4-4c40-937d-068515985712",
+  "redirect_uri": "https://localhost:8000/redirect/"
+}
+
+###

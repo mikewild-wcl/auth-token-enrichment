@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Auth.Token.Enrichment.Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7180",
+      "launchBrowser": false
+    }
+  }
+}

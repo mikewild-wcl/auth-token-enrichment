@@ -1,5 +1,15 @@
 <Solution>
-  <Project Path="Auth.Token.Enrichment.AppHost/Auth.Token.Enrichment.AppHost.csproj" />
+  <Folder Name="/Aspire/">
+    <Project Path="Auth.Token.Enrichment.AppHost/Auth.Token.Enrichment.AppHost.csproj" />
+    <Project Path="Auth.Token.Enrichment.ServiceDefaults/Auth.Token.Enrichment.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Solution/">
+    <File Path="../.editorconfig" />
+    <File Path="../.gitignore" />
+    <File Path="../Directory.Build.props" />
+    <File Path="../Directory.Packages.props" />
+    <File Path="../README.md" />
+  </Folder>
   <Project Path="Auth.Token.Enrichment.AzureB2cWebApp/Auth.Token.Enrichment.AzureB2cWebApp.csproj" />
-  <Project Path="Auth.Token.Enrichment.ServiceDefaults/Auth.Token.Enrichment.ServiceDefaults.csproj" />
+  <Project Path="Auth.Token.Enrichment.Functions/Auth.Token.Enrichment.Functions.csproj" />
 </Solution>
