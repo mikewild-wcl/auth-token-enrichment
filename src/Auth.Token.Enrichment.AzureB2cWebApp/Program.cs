@@ -19,7 +19,7 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 
     ///https://stackoverflow.com/questions/50262561/correlation-failed-in-net-core-asp-net-identity-openid-connect
     //options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
-    options.MinimumSameSitePolicy = SameSiteMode.None;
+    //options.MinimumSameSitePolicy = SameSiteMode.None;
     options.Secure = CookieSecurePolicy.Always;
 
     // Handling SameSite cookie according to https://learn.microsoft.com/aspnet/core/security/samesite?view=aspnetcore-3.1
@@ -88,29 +88,29 @@ builder.Services.Configure<OpenIdConnectOptions>(
     });
 
 //builder.Services.RegisterWebComponents(builder.Configuration);
-builder.Services.Configure<ForwardedHeadersOptions>(options =>
-{
-    //var forwardedHeadersOptions = configuration
-    //    .GetSection("ForwardedHeaders")
-    //    .Get<ForwardedHeadersOptions>();
-    /*
-          "ForwardedHeaders": {
-            "ForwardedHostHeaderName": "X-Original-Host",
-            "OriginalHostHeaderName": "X-Initial-Host",
-            "AllowedHosts": "localhost"
-          }
-     */
-    //var allowedHosts = configuration.GetValue<string>("ForwardedHeaders:AllowedHosts");
+//builder.Services.Configure<ForwardedHeadersOptions>(options =>
+//{
+//    //var forwardedHeadersOptions = configuration
+//    //    .GetSection("ForwardedHeaders")
+//    //    .Get<ForwardedHeadersOptions>();
+//    /*
+//          "ForwardedHeaders": {
+//            "ForwardedHostHeaderName": "X-Original-Host",
+//            "OriginalHostHeaderName": "X-Initial-Host",
+//            "AllowedHosts": "localhost"
+//          }
+//     */
+//    //var allowedHosts = configuration.GetValue<string>("ForwardedHeaders:AllowedHosts");
 
-    options.ForwardedHeaders = ForwardedHeaders.XForwardedHost | ForwardedHeaders.XForwardedProto;
-    //options.ForwardedHostHeaderName = forwardedHeadersOptions.ForwardedHostHeaderName;
-    //options.OriginalHostHeaderName = forwardedHeadersOptions.OriginalHostHeaderName;
-    options.ForwardedHostHeaderName = "X-Original-Host";
-    options.OriginalHostHeaderName = "X-Initial-Host";
+//    options.ForwardedHeaders = ForwardedHeaders.XForwardedHost | ForwardedHeaders.XForwardedProto;
+//    //options.ForwardedHostHeaderName = forwardedHeadersOptions.ForwardedHostHeaderName;
+//    //options.OriginalHostHeaderName = forwardedHeadersOptions.OriginalHostHeaderName;
+//    options.ForwardedHostHeaderName = "X-Original-Host";
+//    options.OriginalHostHeaderName = "X-Initial-Host";
 
-    //options.AllowedHosts = forwardedHeadersOptions.AllowedHosts;
-    options.AllowedHosts = ["localhost", "localhost:7112"];
-});
+//    //options.AllowedHosts = forwardedHeadersOptions.AllowedHosts;
+//    options.AllowedHosts = ["localhost", "localhost:7112"];
+//});
 
 /////
 
@@ -121,12 +121,12 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
 builder.Services.AddRazorPages()
     //Add authentication
     //.AddMvcOptions(options =>
-     //{
-     //    var policy = new AuthorizationPolicyBuilder()
-     //        .RequireAuthenticatedUser()
-     //        .Build();
-     //    options.Filters.Add(new AuthorizeFilter(policy));
-     //})
+    // {
+    //     var policy = new AuthorizationPolicyBuilder()
+    //         .RequireAuthenticatedUser()
+    //         .Build();
+    //     options.Filters.Add(new AuthorizeFilter(policy));
+    // })
     //Add UI for login and logout
     .AddMicrosoftIdentityUI()
     ;
@@ -134,7 +134,7 @@ builder.Services.AddRazorPages()
 var app = builder.Build();
 
 // Add forwarded headers to see if this helps with login
-app.UseForwardedHeaders();
+//app.UseForwardedHeaders();
 
 app.MapDefaultEndpoints();
 
