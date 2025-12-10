@@ -1,0 +1,16 @@
+﻿table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: justify;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+pre {
+    text-align: left;
+    white-space: pre;
+}
