@@ -32,11 +32,12 @@ var b2cConfogSection = builder.Configuration.GetRequiredSection("AzureAdB2C");
 var clientId = b2cConfogSection.GetValue<string>("ClientId");
 
 // Configuration to sign-in users with Azure AD B2C
-//builder.Services
-//    .AddMicrosoftIdentityWebAppAuthentication(
-//    builder.Configuration, 
-//    "AzureAdB2C");
+builder.Services
+    .AddMicrosoftIdentityWebAppAuthentication(
+    builder.Configuration,
+    "AzureAdB2C");
 ///From another working project...
+/*
 builder.Services
     .AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
     .AddMicrosoftIdentityWebApp(options =>
@@ -75,6 +76,7 @@ builder.Services
     .EnableTokenAcquisitionToCallDownstreamApi([]) // new string[] {configuration.GetValue<string>("FacadeAPI:DownstreamScope")})
     .AddDistributedTokenCaches()
     ;
+*/
 // end
 
 builder.Services.Configure<OpenIdConnectOptions>(
