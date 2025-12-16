@@ -96,7 +96,10 @@ public class ExtensionDataFunction(ILogger<ExtensionDataFunction> logger)
         {
             version = "1.0.0",
             action = "Continue",
-            extension_Data = data ?? string.Empty
+            extension_Data = data ?? string.Empty,
+            userName = "Bob Bobson",
+            age = 28,
+            extension_Expiry = DateTime.UtcNow.AddHours(1).ToString("o")
         });
     }
 
