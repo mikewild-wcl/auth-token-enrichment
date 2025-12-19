@@ -419,7 +419,6 @@ FodyWeavers.xsd
 
 # AppSettings Development file
 **/appSettings.Development.json
-local.settings.development.json
 
 # Private data files
 .private/
